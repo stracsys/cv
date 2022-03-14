@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-Regular.woff2");
+}
+@font-face {
+  font-family: "Victor Mono Italic";
+  src: url("../fonts/VictorMono-Italic.woff2");
+}
+
+@layer base {
+  body {
+    @apply font-jet;
+  }
+}
+
+@layer components {
+  .font-jet {
+    font-family: "JetBrains Mono";
+  }
+  .font-victor-italic {
+    font-family: "Victor Mono Italic";
+  }
+}
+
+/* alert components */
+@layer components {
+  .alert-dark {
+    @apply p-4 text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300;
+  }
+  .alert-blue {
+    @apply p-4 text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800;
+  }
+  .alert-red {
+    @apply p-4 text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800;
+  }
+  .alert-green {
+    @apply p-4 text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800;
+  }
+  .alert-yellow {
+    @apply p-4 text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800;
+  }
+}
+
+/* badge component */
+@layer components {
+  .badge-blue {
+    @apply bg-blue-100 text-blue-800 font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800;
+  }
+  .badge-dark {
+    @apply bg-gray-100 text-gray-800 font-semibold px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300;
+  }
+  .badge-red {
+    @apply bg-red-100 text-red-800 font-semibold px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900;
+  }
+  .badge-green {
+    @apply bg-green-100 text-green-800 font-semibold px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900;
+  }
+  .badge-yellow {
+    @apply bg-yellow-100 text-yellow-800 font-semibold px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900;
+  }
+}
+
+/* button component */
+@layer components {
+  .btn-blue {
+    @apply focus:outline-none transition-all text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+  }
+  .btn-alt {
+    @apply focus:outline-none transition-all py-2.5 px-5 font-medium text-gray-900 bg-white rounded-md hover:rounded border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700;
+  }
+  .btn-dark {
+    @apply focus:outline-none transition-all text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700;
+  }
+  .btn-light {
+    @apply focus:outline-none transition-all text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-800;
+  }
+  .btn-green {
+    @apply focus:outline-none transition-all text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800;
+  }
+  .btn-red {
+    @apply focus:outline-none transition-all text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900;
+  }
+  .btn-yellow {
+    @apply focus:outline-none transition-all text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-md hover:rounded-xl px-5 py-2.5 text-center dark:focus:ring-yellow-900;
+  }
+
+  .btn-outline-blue {
+    @apply focus:outline-none transition-all text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800;
+  }
+  .btn-outline-dark {
+    @apply focus:outline-none transition-all text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg px-5 py-2.5 text-center dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800;
+  }
+  .btn-outline-green {
+    @apply focus:outline-none transition-all text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg px-5 py-2.5 text-center dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800;
+  }
+  .btn-outline-red {
+    @apply focus:outline-none transition-all text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg px-5 py-2.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900;
+  }
+  .btn-outline-yellow {
+    @apply focus:outline-none transition-all text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg px-5 py-2.5 text-center dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900;
+  }
+}
+
+/* card component */
+@layer components {
+  .card {
+    @apply p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700;
+  }
+  .card-header {
+    @apply text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+  }
+  .card-content {
+    @apply font-normal text-gray-700 dark:text-gray-400;
+  }
+}
+
+/* from component */
+@layer components {
+  .form-input {
+    @apply shadow-md bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm;
+  }
+  .form-textarea {
+    @apply p-2.5 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+  .form-select {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+  }
+  .form-checkbox {
+    @apply text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600;
+  }
+  .form-radio {
+    @apply border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600;
+  }
+  .form-upload {
+    @apply text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400;
+  }
+}
